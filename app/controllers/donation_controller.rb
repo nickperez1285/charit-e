@@ -59,11 +59,12 @@ client = DocusignRest::Client.new
   def docusign_response 
     utility = DocusignRest::Utility.new 
     if params[:event] == "signing_complete"
-      flash[:notice] = "success"
-      render :text => utility.breakout_path(root_path), content_type: :html
+      # render :text => utility.breakout_path(root_path), content_type: :html
+      redirect_to root_path
     else 
        flash[:notice] = "document not signed"
-       render :text => utility.breakout_path(root_path), content_type: :html
+       # render :text => utility.breakout_path(root_path), content_type: :html
+      redirect_to root_path
 
 
     end 

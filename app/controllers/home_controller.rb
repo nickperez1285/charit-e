@@ -59,6 +59,7 @@ class HomeController < ApplicationController
   end 
 
   def success
+    
   end 
   def fail 
   end 
