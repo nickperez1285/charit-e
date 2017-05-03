@@ -1,0 +1,36 @@
+<%= image_tag("tbridge.png", width:"100%") %> 
+<center>
+<table>
+
+	
+<%= form_for :donate  do |f|%> 
+
+<tr>
+	<th><%= image_tag("25.png")%></th>
+	<th><%= image_tag("50.png")%> </th>
+	<th><%= image_tag("100.png")%> </th>
+	<th><%= image_tag("250.png")%> </th>
+	<th>Other amount?__________</th>
+</tr>
+<tr>
+	<td><center><%= f.check_box :twentyfive%> </center></td>
+	<td><center><%= f.check_box :fifty %></center></td>
+	<td><center><%= f.check_box :hundred%></center> </td>
+	<td><center><%= f.check_box :twohundredfifty%></center> </td>
+	<td><center><%= f.check_box :custom%></center> </td>
+</tr>
+<br>
+
+Complete set of TAX REBATE REWARDS auto-generated for you after payment ! </br><br>
+<strong>Make this a monthly gift ?</strong>
+
+yes <%= f.radio_button :recurring, "true" %> 
+no <%= f.radio_button :recurring, "false" %>
+<% end %> 
+
+</table>
+
+<br>
+<%= button_to("submit" , { :action => "confirm"})%>
+</center>
+
